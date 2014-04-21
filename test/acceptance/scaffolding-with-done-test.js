@@ -1,7 +1,6 @@
 var scaffold = require('../../index.js')
   , mockFs = require('mock-fs')
-  , fs = require('fs')
-  , rmdir = require('rmdir');
+  , fs = require('fs');
 
 describe('Scaffolding an example directory', function () {
   var fixtures;
@@ -34,8 +33,8 @@ describe('Scaffolding an example directory', function () {
       });
   });
 
-  after(function (done) {
-    rmdir(fixtures, done);
+  after(function () {
+    mockFs.restore();
   });
 
   describe('scaffolding-with-callbacks', function () {
