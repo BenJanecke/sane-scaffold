@@ -1,7 +1,6 @@
 var File = require('../../lib/file')
   , mockFs = require('mock-fs')
-  , fs = require('fs')
-  , rmdir = require('rmdir');
+  , fs = require('fs');
 
 describe('File', function () {
   var file
@@ -14,8 +13,8 @@ describe('File', function () {
     mockFs(toMock);
   });
 
-  after(function (done) {
-    rmdir(fixtures, done);
+  after(function () {
+    mockFs.restore();
   });
 
   describe('#make', function () {

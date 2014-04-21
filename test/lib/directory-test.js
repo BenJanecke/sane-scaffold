@@ -1,7 +1,6 @@
 var Directory = require('../../lib/directory')
   , mockFs = require('mock-fs')
-  , fs = require('fs')
-  , rmdir = require('rmdir');
+  , fs = require('fs');
 
 describe('Directory', function () {
   var dir
@@ -14,8 +13,8 @@ describe('Directory', function () {
     mockFs(toMock);
   });
 
-  after(function (done) {
-    rmdir(fixtures, done);
+  after(function () {
+    mockFs.restore();
   });
 
   describe('#make', function () {
