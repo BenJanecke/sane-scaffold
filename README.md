@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/BenJanecke/sane-scaffold.svg?branch=master)](https://travis-ci.org/BenJanecke/sane-scaffold)
 
+[![Dependency Status](https://gemnasium.com/BenJanecke/sane-scaffold.svg)](https://gemnasium.com/BenJanecke/sane-scaffold)
+
 Sane composable filesystem scaffolding.
 
 Code that looks like this
