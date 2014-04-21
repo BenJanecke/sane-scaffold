@@ -8,12 +8,22 @@ describe('filesystem', function () {
 
   before(function (done) {
     fixtures = __dirname + '/fixtures/filesystem-generator';
-    filesystem = fsBuilder.start(fixtures);
-    fs.mkdir(fixtures, done);
+    fs.mkdir(fixtures, function () {
+      filesystem = fsBuilder.start(fixtures);
+      done();
+    });
   });
 
   after(function (done) {
     rmdir(fixtures, done);
+  });
+
+  describe('#start', function () {
+    it('complains if the directory does not exist', function () {
+      expect(function () {
+        fsBuilder.start('idontexist');
+      }).to.throw('That directory does not exist');
+    });
   });
 
   describe('#directory', function () {

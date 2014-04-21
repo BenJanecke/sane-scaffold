@@ -7,20 +7,21 @@ describe('Scaffolding an example directory', function () {
 
   before(function (done) {
     fixture = __dirname + '/fixtures/scaffolding-with-callbacks';
-    fs.mkdir(fixture);
-    scaffold
-      .start(fixture)
-      .directory('empty-directory')
-      .directory('put-things-inside-me', function (dir) {
-        dir.directory('im-a-subdirectory', function (dir) {
-          dir.directory('directoryception');
+    fs.mkdir(fixture, function () {
+      scaffold
+        .start(fixture)
+        .directory('empty-directory')
+        .directory('put-things-inside-me', function (dir) {
+          dir.directory('im-a-subdirectory', function (dir) {
+            dir.directory('directoryception');
+          })
+          .file('files-inside-directories.ext');
         })
-        .file('files-inside-directories.ext');
-      })
-      .file('files-are-simple.txt', 'And can have content')
-      .done(function () {
-        done();
-      });
+        .file('files-are-simple.txt', 'And can have content')
+        .done(function () {
+          done();
+        });
+    });
   });
 
   after(function (done) {

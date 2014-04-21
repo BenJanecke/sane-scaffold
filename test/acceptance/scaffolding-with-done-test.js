@@ -7,28 +7,29 @@ describe('Scaffolding an example directory', function () {
 
   before(function (done) {
     fixture = __dirname + '/fixtures/scaffolding-with-done';
-    fs.mkdir(fixture);
-    scaffold
-      .start(fixture)
-      .directory('empty-directory')
-      .directory('put-things-inside-me')
-      .done(function (dir) {
+    fs.mkdir(fixture, function () {
+      scaffold
+        .start(fixture)
+        .directory('empty-directory')
+        .directory('put-things-inside-me')
+        .done(function (dir) {
 
-        dir
-          .directory('im-a-subdirectory')
-          .done(function (dir) {
-            dir.directory('directoryception');
-          })
-          .file('files-inside-directories.ext');
+          dir
+            .directory('im-a-subdirectory')
+            .done(function (dir) {
+              dir.directory('directoryception');
+            })
+            .file('files-inside-directories.ext');
 
-        scaffold
-          .start(fixture)
-          .file('files-are-simple.txt', 'And can have content')
-          .done(function () {
-            done();
-          });
+          scaffold
+            .start(fixture)
+            .file('files-are-simple.txt', 'And can have content')
+            .done(function () {
+              done();
+            });
 
-      });
+        });
+    });
   });
 
   after(function (done) {
