@@ -1,5 +1,7 @@
 # sane-scaffold
 
+[![Build Status](https://secure.travis-ci.org/benjanecke/sane-scaffold.png)](http://travis-ci.org/benjanecke/sane-scaffold)
+
 Sane composable filesystem scaffolding.
 
 Code that looks like this
