@@ -1,0 +1,4 @@
+--ui bdd
+--reporter spec
+test/*.js
+test/**/*.js

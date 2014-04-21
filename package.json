@@ -1,0 +1,38 @@
+{
+  "name": "sane-scaffold",
+  "version": "1.0.0",
+  "description": "Sane composable filesystem scaffolding",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BenJanecke/sane-scaffold.git"
+  },
+  "keywords": [
+    "fs",
+    "filesystem",
+    "scaffold"
+  ],
+  "author": "Ben Janecke",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/BenJanecke/sane-scaffold/issues"
+  },
+  "homepage": "https://github.com/BenJanecke/sane-scaffold",
+  "dependencies": {
+    "q": "~1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1",
+    "sinon": "~1.9.0",
+    "sinon-chai": "~2.5.0",
+    "chai-fs": "~0.0.3",
+    "rmdir": "~1.0.4"
+  }
+}
