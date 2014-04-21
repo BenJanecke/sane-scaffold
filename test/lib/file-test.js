@@ -1,6 +1,5 @@
 var File = require('../../lib/file')
-  , mockFs = require('mock-fs')
-  , fs = require('fs');
+  , mockFs = require('mock-fs');
 
 describe('File', function () {
   var file

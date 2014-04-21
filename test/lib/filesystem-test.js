@@ -1,6 +1,5 @@
 var fsBuilder = require('../../lib/filesystem')
-  , mockFs = require('mock-fs')
-  , fs = require('fs');
+  , mockFs = require('mock-fs');
 
 describe('filesystem', function () {
   var filesystem

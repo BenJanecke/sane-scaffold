@@ -1,6 +1,5 @@
 var scaffold = require('../../index.js')
-  , mockFs = require('mock-fs')
-  , fs = require('fs');
+  , mockFs = require('mock-fs');
 
 describe('Scaffolding an example directory', function () {
   var fixtures;

@@ -1,6 +1,5 @@
 var Directory = require('../../lib/directory')
-  , mockFs = require('mock-fs')
-  , fs = require('fs');
+  , mockFs = require('mock-fs');
 
 describe('Directory', function () {
   var dir
