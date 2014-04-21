@@ -1,14 +1,14 @@
-var Filesystem = require('../../lib/filesystem')
+var fsBuilder = require('../../lib/filesystem')
   , fs = require('fs')
   , rmdir = require('rmdir');
 
-describe('Filesystem', function () {
+describe('filesystem', function () {
   var filesystem
     , fixutres;
 
   before(function (done) {
     fixtures = __dirname + '/fixtures/filesystem-generator';
-    filesystem = new Filesystem(fixtures);
+    filesystem = fsBuilder.start(fixtures);
     fs.mkdir(fixtures, done);
   });
 
