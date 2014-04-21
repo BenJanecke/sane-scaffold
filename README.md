@@ -1,6 +1,6 @@
 # sane-scaffold
 
-[![Build Status](https://secure.travis-ci.org/benjanecke/sane-scaffold.png)](http://travis-ci.org/benjanecke/sane-scaffold)
+[![Build Status](https://travis-ci.org/BenJanecke/sane-scaffold.svg?branch=master)](https://travis-ci.org/BenJanecke/sane-scaffold)
 
 Sane composable filesystem scaffolding.
 
