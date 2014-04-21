@@ -1,6 +1,6 @@
 {
   "name": "sane-scaffold",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sane composable filesystem scaffolding",
   "main": "index.js",
   "directories": {
