@@ -1,4 +1,5 @@
 var Directory = require('../../lib/directory')
+  , mockFs = require('mock-fs')
   , fs = require('fs')
   , rmdir = require('rmdir');
 
@@ -6,9 +7,11 @@ describe('Directory', function () {
   var dir
     , fixutres;
 
-  before(function (done) {
+  before(function () {
+    var toMock = {};
     fixtures = __dirname + '/fixtures/directory-generator';
-    fs.mkdir(fixtures, done);
+    toMock[fixtures]  = {};
+    mockFs(toMock);
   });
 
   after(function (done) {

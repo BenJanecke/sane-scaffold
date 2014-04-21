@@ -1,4 +1,5 @@
 var fsBuilder = require('../../lib/filesystem')
+  , mockFs = require('mock-fs')
   , fs = require('fs')
   , rmdir = require('rmdir');
 
@@ -6,12 +7,12 @@ describe('filesystem', function () {
   var filesystem
     , fixutres;
 
-  before(function (done) {
+  before(function () {
+    var toMock = {};
     fixtures = __dirname + '/fixtures/filesystem-generator';
-    fs.mkdir(fixtures, function () {
-      filesystem = fsBuilder.start(fixtures);
-      done();
-    });
+    toMock[fixtures]  = {};
+    mockFs(toMock);
+    filesystem = fsBuilder.start(fixtures);
   });
 
   after(function (done) {
