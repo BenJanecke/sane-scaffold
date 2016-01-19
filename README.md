@@ -1,6 +1,6 @@
 # sane-scaffold
 
-[![Build Status](https://travis-ci.org/BenJanecke/sane-scaffold.svg?branch=master)](https://travis-ci.org/BenJanecke/sane-scaffold) [![Dependency Status](https://gemnasium.com/BenJanecke/sane-scaffold.svg)](https://gemnasium.com/BenJanecke/sane-scaffold) [![Code Climate](https://codeclimate.com/github/BenJanecke/sane-scaffold.png)](https://codeclimate.com/github/BenJanecke/sane-scaffold) [![Code Climate](https://codeclimate.com/github/BenJanecke/sane-scaffold/coverage.png)](https://codeclimate.com/github/BenJanecke/sane-scaffold)
+[![Build Status](https://travis-ci.org/BenJanecke/sane-scaffold.svg?branch=master)](https://travis-ci.org/BenJanecke/sane-scaffold) [![Dependency Status](https://gemnasium.com/BenJanecke/sane-scaffold.svg)](https://gemnasium.com/BenJanecke/sane-scaffold) [![Code Climate](https://codeclimate.com/github/BenJanecke/sane-scaffold.png)](https://codeclimate.com/github/BenJanecke/sane-scaffold)
 
 Sane composable filesystem scaffolding.
 
@@ -33,7 +33,7 @@ Ends up creating a directory structure that looks like this
 |empty-directory
 |put-things-inside-me
  -|im-a-subdirectory
-  -|directoryception 
+  -|directoryception
  -files-inside-directories.ext
 -files-are-simple.txt
 ```
@@ -51,7 +51,7 @@ Ends up creating a directory structure that looks like this
   base = scaffold.start('/some-path');
 
   // creates /some-path/some-directory
-  base.directory('some-directory'); 
+  base.directory('some-directory');
 
   // Commands can be chained
   base.directory('dir')
@@ -71,7 +71,7 @@ Ends up creating a directory structure that looks like this
       });
   });
 
-  // Optionally use done instead of callbacks 
+  // Optionally use done instead of callbacks
 
   base.directory('dir')
       .done(function (dir) {
@@ -90,11 +90,11 @@ Ends up creating a directory structure that looks like this
   base = scaffold.start('/some-path');
 
   // Create /some-path/empty-file.txt
-  base.file('empty-file.txt'); 
+  base.file('empty-file.txt');
   // Create /some-path/empty-file.txt with 'now some content' as its contents
-  base.file('file.txt', 'now some content'); 
+  base.file('file.txt', 'now some content');
 
-  // Chain commands 
+  // Chain commands
 
   base.file('one.hahaha')
       .file('two.hahaha')
